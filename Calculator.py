@@ -70,9 +70,9 @@ class MainWindow(qtw.QWidget):
     def func_result(self):
         fin_string = "".join(self.fin_nums) + "".join(self.temp_nums)
         if fin_string != "":
-            anti_crash = fin_string[-1]
-        else: anti_crash = "nic"
-        if anti_crash == "+" or anti_crash == "-" or anti_crash == "*" or anti_crash == "/":
+            ends_with_sign = fin_string[-1]
+        else: ends_with_sign = "nic"
+        if ends_with_sign == "+" or ends_with_sign == "-" or ends_with_sign == "*" or ends_with_sign == "/":
             self.result_field.setText("Nepoužívejte znaménka na konci příkladu! Zmáčkni tlačítko Vymazat.")
         elif fin_string == "":
             self.result_field.setText("Prosím zmáčkni Vymazat a zadej příklad.") 
@@ -90,3 +90,4 @@ app = qtw.QApplication([])
 mw = MainWindow()
 app.setStyle(qtw.QStyleFactory.create("Fusion"))
 app.exec_()
+#made by JohnMar1 (Jan Marval)
